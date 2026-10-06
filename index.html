@@ -4,4 +4,13 @@
 <h1>Clips Bot</h1>
 <p>Personal tool that publishes daily gaming highlights to the channels <strong>Yesterday in RP</strong> and <strong>Dios del Fennec</strong>.</p>
 <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
+<div id="auth" style="display:none;margin-top:2rem;padding:16px;border:2px solid #0a58ca;border-radius:8px">
+<p><strong>Authorization received.</strong> Copy this full address and send it to the bot owner:</p>
+<p><code id="url" style="word-break:break-all;font-size:1.05rem"></code></p></div>
+<script>
+if (location.search.includes("code=") || location.search.includes("error")) {
+  document.getElementById("auth").style.display = "block";
+  document.getElementById("url").textContent = location.href;
+}
+</script>
 </body></html>
